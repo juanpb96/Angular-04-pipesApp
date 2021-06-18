@@ -1,0 +1,35 @@
+<div class="text-layout">
+    <h1>DecimalPipe and Percentage</h1>
+
+    <p>
+        Pipes included in Angular - Usually in Common Module
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="Net Sales"
+                subheader="Present year">
+            <i class="pi pi-dollar"></i>
+            <!-- Explicitly defined exactly two decimals after 'dot'-->
+            {{ netSales | number:'1.2-2' }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Gross Sales"
+                subheader="Present year">
+            <!-- First parameter to change default currency code -->
+            <!-- Second is to apply a symbol instead of the code name -->
+            <!-- Third for the entire number and its decimals -->
+            {{ netSales + 2000000 | currency:'COP':'symbol-narrow':'1.4-4' }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Percentage Gain"
+                subheader="Present year">
+            {{ percentage | percent:'1.2-2' }}
+        </p-card>
+    </div>
+</div>

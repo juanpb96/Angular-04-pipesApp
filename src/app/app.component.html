@@ -1,9 +1,25 @@
-<h1>{{ name | titlecase }}</h1>
-<h1>{{ value | number }}</h1>
-<h1>{{ obj | json }}</h1>
+<!-- Working with PrimeNG, add specific style to Angular.json in assets -->
+<!-- <div class="text-layout">
+        <h1>{{ name | titlecase }}</h1>
+        <h1>{{ value | number }}</h1>
+        <h1>{{ obj | json }}</h1>
+</div>
 
-<button pButton (click)="showName()">
-  Change name
+<button pButton 
+        (click)="showName()" 
+        label="Change name"
+        icon="pi pi-check" iconPos="right"
+        class="p-button-help">
 </button>
 
-<!-- Working with PrimeNG, add specific style to Angular.json in assets -->
+<hr>
+
+<p-card [header]="name | titlecase" 
+        subheader="This is a subheader"
+        [style]="{'width': '25rem', 'margin-bottom': '2em'}">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+</p-card> -->
+
+<app-menu></app-menu>
+
+<router-outlet></router-outlet>
